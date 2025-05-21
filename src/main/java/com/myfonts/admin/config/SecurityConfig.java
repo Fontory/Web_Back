@@ -39,7 +39,7 @@ public class SecurityConfig {
                                 "/v3/api-docs.yaml",
                                 "/webjars/**"
                         ).permitAll()
-                        .anyRequest().hasRole("ADMIN")
+                        .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
