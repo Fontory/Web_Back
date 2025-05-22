@@ -49,7 +49,11 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:3000")); // 프론트엔드 주소
+        config.setAllowedOrigins(List.of(
+                "http://localhost:3000",
+                "http://ceprj.gachon.ac.kr:3000"
+        ));
+
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true); // 세션/쿠키 허용 (필요할 경우)
