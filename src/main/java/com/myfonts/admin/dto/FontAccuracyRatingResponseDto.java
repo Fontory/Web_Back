@@ -14,4 +14,5 @@ public class FontAccuracyRatingResponseDto {
     private String userId;
     private Float accuracy;  // vectorSimilarity
     private Float rating;    // creatorRating
+    private String handwritingFolderPath; //추가
 }
