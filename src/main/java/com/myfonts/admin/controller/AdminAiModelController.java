@@ -1,7 +1,7 @@
 package com.myfonts.admin.controller;
 
-import com.myfonts.admin.dto.FontAccuracySummaryResponse;
-import com.myfonts.admin.service.AiModelService;
+import com.myfonts.admin.dto.admin.FontAccuracySummaryResponse;
+import com.myfonts.admin.service.AdminAiModelService;
 import com.myfonts.admin.util.JwtUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/admin/aimodel")
 @RequiredArgsConstructor
-public class AiModelController {
+public class AdminAiModelController {
 
-    private final AiModelService aiModelService;
+    private final AdminAiModelService aiModelService;
     private final JwtUtil jwtUtil;
 
     @PostMapping("/accuracy")

@@ -1,9 +1,9 @@
 package com.myfonts.admin.service;
 
-import com.myfonts.admin.domain.AiVersion;
-import com.myfonts.admin.dto.AiVersionListDto;
-import com.myfonts.admin.dto.AiVersionRequestDto;
-import com.myfonts.admin.dto.AiVersionResponseDto;
+import com.myfonts.admin.domain.AdminAiVersion;
+import com.myfonts.admin.dto.admin.AiVersionListDto;
+import com.myfonts.admin.dto.admin.AiVersionRequestDto;
+import com.myfonts.admin.dto.admin.AiVersionResponseDto;
 import com.myfonts.admin.repository.AiVersionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class AiVersionService {
+public class AdminAiVersionService {
 
     private final AiVersionRepository aiVersionRepository;
 
@@ -28,7 +28,7 @@ public class AiVersionService {
                         });
             }
 
-            AiVersion newVersion = AiVersion.builder()
+            AdminAiVersion newVersion = AdminAiVersion.builder()
                     .versionName(dto.getVersionName())
                     .description(dto.getDescription())
                     .isCurrentVersion(dto.getIsCurrentVersion())
@@ -43,7 +43,7 @@ public class AiVersionService {
     }
 
     public List<AiVersionListDto> getAllVersions() {
-        List<AiVersion> versions = aiVersionRepository.findAll(Sort.by(Sort.Direction.DESC, "createdAt"));
+        List<AdminAiVersion> versions = aiVersionRepository.findAll(Sort.by(Sort.Direction.DESC, "createdAt"));
 
         return versions.stream()
                 .map(version -> AiVersionListDto.builder()

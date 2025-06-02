@@ -1,8 +1,8 @@
 package com.myfonts.admin.service;
 
 import com.myfonts.admin.domain.Font;
-import com.myfonts.admin.dto.FontAccuracyRatingResponseDto;
-import com.myfonts.admin.dto.FontAccuracySummaryResponse;
+import com.myfonts.admin.dto.admin.FontAccuracyRatingResponseDto;
+import com.myfonts.admin.dto.admin.FontAccuracySummaryResponse;
 import com.myfonts.admin.repository.FontRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
-public class AiModelService {
+public class AdminAiModelService {
 
     private final FontRepository fontRepository;
 

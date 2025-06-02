@@ -1,7 +1,7 @@
 package com.myfonts.admin.controller;
 
-import com.myfonts.admin.dto.AdminLoginRequest;
-import com.myfonts.admin.dto.TokenResponse;
+import com.myfonts.admin.dto.admin.AdminLoginRequest;
+import com.myfonts.admin.dto.admin.TokenResponse;
 import com.myfonts.admin.service.AdminService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;

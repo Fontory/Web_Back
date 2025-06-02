@@ -1,4 +1,4 @@
-package com.myfonts.admin.dto;
+package com.myfonts.admin.dto.admin;
 
 import lombok.*;
 
